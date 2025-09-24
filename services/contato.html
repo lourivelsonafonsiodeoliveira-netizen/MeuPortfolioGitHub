@@ -1,24 +1,59 @@
-<form action="https://formspree.io/f/myznzgnv" method="POST" id="contact-form">
-    <div class="input-group">
-        <label for="name">Nome Completo</label>
-        <input type="text" id="name" name="name" required>
-    </div>
-    <div class="input-group">
-        <label for="email">Seu Melhor E-mail</label>
-        <input type="email" id="email" name="email" required>
-    </div>
-    <div class="input-group">
-        <label for="phone">Telefone (Whatsapp)</label>
-        <input type="tel" id="phone" name="phone" required>
-    </div>
-    <div class="input-group">
-        <label for="project">Conte-nos sobre o seu Projeto e Desafios</label>
-        <textarea id="project" name="project" rows="5" required></textarea>
-    </div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - TechIndigenaSolution</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>TechIndigenaSolution</h1>
+            <nav>
+                <a href="../index.html">Home</a>
+                <a href="contato.html" class="active">Contato</a>
+            </nav>
+        </div>
+    </header>
 
-    <div class="input-group" style="display: none;">
-        <input type="text" name="_gotcha">
-    </div>
+    <main class="container">
+        <section id="contact-form-section" class="card">
+            <h2>Agende Sua Consultoria Estratégica Gratuita</h2>
+            <p>Preencha o formulário abaixo para iniciarmos a análise das suas <strong>dores</strong> e necessidades. Em até 24h entraremos em contato para desenhar a <strong>solução tecnológica ideal</strong> para você.</p>
 
-    <button type="submit" class="cta-button">Enviar Pedido de Análise</button>
-</form>
+            <form action="https://formspree.io/f/myznzgnv" method="POST" id="contact-form">
+                <div class="input-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Seu Melhor E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone">Telefone (Whatsapp)</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="input-group">
+                    <label for="project">Conte-nos sobre o seu Projeto e Desafios</label>
+                    <textarea id="project" name="project" rows="5" required></textarea>
+                </div>
+
+                <div class="input-group" style="display: none;">
+                    <input type="text" name="_gotcha">
+                </div>
+
+                <button type="submit" class="cta-button">Enviar Pedido de Análise</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TechIndigenaSolution. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
