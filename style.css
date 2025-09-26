@@ -1,7 +1,4 @@
-/* ========================================================= */
-/* ESTILOS GERAIS */
-/* ========================================================= */
-
+/* Estilos globais */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -13,221 +10,282 @@ body {
 
 .container {
     width: 80%;
-    margin: auto;
-    overflow: hidden;
+    margin: 0 auto;
 }
 
+/* Estilos do Cabeçalho e Navegação */
 header {
-    background: #007bff;
+    background-color: #007bff; /* Cor azul primária */
     color: white;
-    padding-top: 20px;
-    min-height: 70px;
-    border-bottom: #0056b3 3px solid;
-}
-
-header a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
+    padding: 15px 0;
 }
 
 header h1 {
-    float: left;
     margin: 0;
+    font-size: 1.8em;
 }
 
 header nav {
-    float: right;
-    margin-top: 10px;
+    /* Garante que o menu fique alinhado */
+    display: flex;
+    gap: 20px;
 }
 
 header nav a {
-    padding: 0 15px;
-}
-
-header nav a.active {
+    color: white;
+    text-decoration: none;
     font-weight: bold;
-    color: #ffd700;
+    transition: color 0.3s ease;
 }
 
-/* ========================================================= */
-/* SEÇÕES PRINCIPAIS */
-/* ========================================================= */
+header nav a:hover, header nav a.active {
+    color: #ffd700; /* Cor de destaque (amarelo) ao passar o mouse */
+}
 
-main section {
+/* --- ESTILOS PARA O LOGO NO HEADER (CORREÇÃO DE ALINHAMENTO) --- */
+
+.logo img {
+    /* Garante que o logo tenha a altura correta e não fique muito grande */
+    height: 40px;
+    vertical-align: middle;
+}
+
+header .container {
+    /* Garante que o logo e o menu fiquem alinhados */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Esconde o <h1> original (texto) para não duplicar o nome com a imagem do logo */
+header h1 {
+    display: none;
+}
+
+/* Estilos dos Botões CTA */
+.cta-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+.cta-button.secondary {
+    background-color: #6c757d; /* Cor cinza para botões secundários */
+}
+
+.cta-button.secondary:hover {
+    background-color: #5a6268;
+}
+
+/* --- ESTILOS PARA O BANNER DE FUNDO (CORRIGIDO) --- */
+
+.hero-section {
+    /* Caminho para a imagem PNG do banner */
+    background-image: url('banner_fundo.png');
+
+    /* Configura o fundo para cobrir toda a área sem repetir */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Adiciona uma cor escura transparente sobre a imagem para que o texto branco se destaque */
+    background-color: rgba(0, 0, 0, 0.45); /* Camada escura */
+    background-blend-mode: darken; /* Mistura a cor com a imagem */
+
+    /* Garante que o texto dentro da seção fique branco */
+    color: white;
+
+    /* Aumenta a altura da seção para que o banner seja visível */
+    padding: 150px 0;
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+/* Corrigido: Estilos para o texto no banner ficar grande e visível */
+.hero-section h2 {
+    font-size: 3em; /* Título grande */
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Garante que o botão na seção hero mantenha o estilo azul */
+.hero-section .cta-button {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Estilos da Seção de Serviços */
+#services {
     padding: 40px 0;
-}
-
-#hero {
-    background: #e6e6e6;
-    color: #333;
     text-align: center;
-    padding: 100px 0;
-    border-bottom: 1px solid #ccc;
 }
 
-#hero h2 {
-    font-size: 45px;
+#services h2 {
+    margin-bottom: 30px;
+    color: #007bff;
+    font-size: 2em;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(33% - 20px); /* 3 cards por linha no desktop */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.service-card i {
+    font-size: 2.5em;
+    color: #007bff;
     margin-bottom: 15px;
 }
 
-#hero p {
-    font-size: 20px;
-    margin-bottom: 30px;
+.service-card h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
+.service-card p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Estilos da Seção "Nossa Abordagem" */
 #about {
-    background: #fff;
+    padding: 50px 0;
+    background-color: #e9ecef;
     text-align: center;
 }
 
 #about h2 {
-    color: #007bff;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    display: inline-block;
-    background: #007bff;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-
-.cta-button:hover {
-    background: #0056b3;
-}
-
-.cta-button.secondary {
-    background: #333;
-}
-
-.cta-button.secondary:hover {
-    background: #555;
-}
-
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
-}
-
-/* ========================================================= */
-/* ESTILO GERAL DE CARDS DE SERVIÇOS (PARA CORRIGIR O VISUAL DOS NOVOS CARDS) */
-/* ========================================================= */
-
-#services h2 {
-    color: #007bff;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-/* Cria um grid (layout de colunas) para os cards de serviço */
-.service-list {
-    display: grid;
-    /* Define o número de colunas, 3 por linha, responsivo */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px; /* Espaço entre os cards */
-    padding: 30px 0;
-}
-
-/* Estilo para cada card de serviço */
-.service-card {
-    background-color: #fff; /* Fundo branco ou claro */
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-/* Efeito ao passar o mouse */
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilo para os ícones */
-.service-card i {
-    font-size: 40px;
-    color: #007bff; /* Cor principal */
-    margin-bottom: 15px;
-}
-
-/* Títulos dos cards */
-.service-card h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
     color: #333;
 }
 
-/* Botão "Ver Detalhes" dentro do card */
-.service-card .cta-button {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 8px 15px;
-    background-color: #007bff;
+/* Estilos do Rodapé */
+footer {
+    background-color: #333;
     color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 14px;
-    transition: background-color 0.3s;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
 }
 
-/* ========================================================= */
-/* ESTILO PARA PÁGINA DE CONTATO (contato.html) */
-/* ========================================================= */
 
+/* Estilos de Páginas de Detalhes (Services/*) */
 .card {
-    background: white;
-    padding: 30px;
+    background-color: white;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 900px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .card h2 {
     color: #007bff;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid #007bff;
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
 
-/* Define que o conteúdo do formulário (label e input) fique em uma coluna e alinhado */
-#contact-form-section .input-group {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Alinha o label à esquerda */
+.card h3 {
+    color: #333;
+    margin-top: 30px;
     margin-bottom: 15px;
 }
 
-/* Estilo base para todos os inputs e textarea */
-#contact-form-section input[type="text"],
-#contact-form-section input[type="email"],
-#contact-form-section input[type="tel"],
-#contact-form-section textarea {
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card ul li {
+    background: #f1f1f1;
+    margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border-left: 5px solid #007bff;
     border-radius: 4px;
-    width: 100%;
-    box-sizing: border-box; /* Garante que padding e borda não aumentem o tamanho total */
-    margin-top: 5px;
+    display: flex;
+    align-items: center;
 }
 
-/* AJUSTES FINAIS DE LARGURA PARA O FORMULÁRIO DE CONTATO */
-#contact-form-section input[type="text"],
-#contact-form-section input[type="email"],
-#contact-form-section input[type="tel"] {
-    max-width: 450px; /* Limita a largura para ficar mais compacto */
+.card ul li i {
+    margin-right: 10px;
+    color: #007bff;
 }
 
-/* Mantém a área de texto (textarea) maior, mas também limita */
-#contact-form-section textarea {
-    max-width: 600px;
+.regulations h4 {
+    color: #5a6268;
+    margin-top: 25px;
+}
+
+.contact-buttons a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Layout responsivo */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .service-card {
+        width: calc(50% - 20px); /* 2 cards por linha em tablets */
+    }
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav {
+        margin-top: 10px;
+    }
+
+    .hero-section h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        width: 100%; /* 1 card por linha em celulares */
+    }
+
+    .hero-section {
+        padding: 100px 0;
+    }
 }
