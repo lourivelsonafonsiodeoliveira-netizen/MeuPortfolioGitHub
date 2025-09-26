@@ -1,75 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechIndigenaSolution | Contato e Consultoria</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>Contato - TechIndigenaSolution</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-
     <header>
-        <nav>
-            <div class="logo">TechIndigenaSolution</div>
-            <div class="nav-links">
-                <a href="../index.html#servicos">Serviços</a>
-                <a href="../index.html#consultoria">Consultoria</a>
-                <a href="contato.html">Contato</a>
-            </div>
-        </nav>
+        <div class="container">
+            <h1>TechIndigenaSolution</h1>
+            <nav>
+                <a href="../index.html">Home</a>
+                <a href="contato.html" class="active">Contato</a>
+            </nav>
+        </div>
     </header>
 
-    <section id="hero" class="small-hero">
-        <div class="hero-content">
-            <p class="breadcrumbs"><a href="../index.html">Home</a> / Contato</p>
-            <h1>Agende Sua Consultoria Estratégica Gratuita</h1>
+    <main class="container">
+        <section id="contact-form-section" class="card">
+            <h2>Agende Sua Consultoria Estratégica Gratuita</h2>
             <p>Preencha o formulário abaixo para iniciarmos a análise das suas <strong>dores</strong> e necessidades. Em até 24h entraremos em contato para desenhar a <strong>solução tecnológica ideal</strong> para você.</p>
-        </div>
-    </section>
 
-    <section id="contact-form-section">
-        <div class="form-container">
-            <h2>Fale com a TechIndigenaSolution</h2>
+            <form action="https://formspree.io/f/myznzgnv" method="POST" id="contact-form">
+                <div class="input-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Seu Melhor E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone">Telefone (Whatsapp)</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="input-group">
+                    <label for="project">Conte-nos sobre o seu Projeto e Desafios</label>
+                    <textarea id="project" name="project" rows="5" required></textarea>
+                </div>
 
-            <form action="YOUR_FORM_ENDPOINT" method="POST" id="contact-form">
+                <div class="input-group" style="display: none;">
+                    <input type="text" name="_gotcha">
+                </div>
 
-                <label for="nome">Seu Nome Completo:</label>
-                <input type="text" id="nome" name="Nome" required>
-
-                <label for="empresa">Empresa/Ramo de Atuação (Opcional):</label>
-                <input type="text" id="empresa" name="Empresa">
-
-                <label for="email">E-mail de Contato:</label>
-                <input type="email" id="email" name="Email" required>
-
-                <label for="telefone">Telefone/WhatsApp:</label>
-                <input type="tel" id="telefone" name="Telefone" required>
-
-                <label for="servico">Qual o seu maior interesse?</label>
-                <select id="servico" name="Interesse Principal" required>
-                    <option value="" disabled selected>Selecione uma opção</option>
-                    <option value="Consultoria Estratégica (Análise de Dores)">Consultoria Estratégica (Análise de Dores)</option>
-                    <option value="Automação / RPA NoCode">Automação / RPA NoCode</option>
-                    <option value="Chatbots / Assistentes (WhatsApp/Site)">Chatbots / Assistentes (WhatsApp/Site)</option>
-                    <option value="IA / ML e Desenvolvimento Web">IA / ML e Desenvolvimento Web</option>
-                    <option value="Outro">Outro</option>
-                </select>
-
-                <label for="mensagem">Descreva a sua dor ou o seu projeto:</label>
-                <textarea id="mensagem" name="Mensagem" rows="5" required></textarea>
-
-                <button type="submit" class="btn-principal">Enviar Solicitação de Consultoria</button>
+                <button type="submit" class="cta-button">Enviar Pedido de Análise</button>
             </form>
-
-            <p class="privacidade">Suas informações são confidenciais e usadas apenas para fins de contato. Não enviamos spam.</p>
-
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2025 TechIndigenaSolution | Soluções Tecnológicas. Todos os direitos reservados.</p>
+        <p>&copy; 2024 TechIndigenaSolution. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="../script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

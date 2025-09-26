@@ -1,402 +1,233 @@
-/* Reset Básico para melhor consistência */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-:root {
-    --primary-color: #004d99; /* Azul Corporativo */
-    --secondary-color: #ffd700; /* Amarelo Dourado */
-    --background-light: #f4f7f6;
-    --text-dark: #333;
-    --text-light: #555;
-}
+/* ========================================================= */
+/* ESTILOS GERAIS */
+/* ========================================================= */
 
 body {
-    background-color: var(--background-light);
-    color: var(--text-dark);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
     line-height: 1.6;
 }
 
-/* --- HEADER / NAVEGAÇÃO --- */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
 header {
-    background-color: var(--primary-color);
+    background: #007bff;
     color: white;
-    padding: 15px 50px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    position: sticky; /* Fica fixo ao rolar */
-    top: 0;
-    z-index: 1000;
+    padding-top: 20px;
+    min-height: 70px;
+    border-bottom: #0056b3 3px solid;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.logo {
-    font-size: 1.8em;
-    font-weight: 700;
-}
-
-.nav-links a {
+header a {
     color: white;
     text-decoration: none;
-    margin-left: 25px;
-    font-size: 1em;
-    transition: color 0.3s;
+    text-transform: uppercase;
+    font-size: 16px;
 }
 
-.nav-links a:hover {
-    color: var(--secondary-color);
+header h1 {
+    float: left;
+    margin: 0;
 }
 
-/* --- SEÇÃO HERO --- */
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header nav a {
+    padding: 0 15px;
+}
+
+header nav a.active {
+    font-weight: bold;
+    color: #ffd700;
+}
+
+/* ========================================================= */
+/* SEÇÕES PRINCIPAIS */
+/* ========================================================= */
+
+main section {
+    padding: 40px 0;
+}
+
 #hero {
-    background-color: #ffffff;
-    padding: 100px 50px;
+    background: #e6e6e6;
+    color: #333;
     text-align: center;
-    border-bottom: 5px solid var(--secondary-color);
+    padding: 100px 0;
+    border-bottom: 1px solid #ccc;
 }
 
-.hero-content {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-#hero h1 {
-    font-size: 3.5em;
-    margin-bottom: 20px;
-    color: var(--primary-color);
+#hero h2 {
+    font-size: 45px;
+    margin-bottom: 15px;
 }
 
 #hero p {
-    font-size: 1.4em;
-    margin-bottom: 40px;
-    max-width: 700px; /* Adicionado para centralizar e melhorar a leitura */
-    margin-left: auto; /* Adicionado para centralizar e melhorar a leitura */
-    margin-right: auto; /* Adicionado para centralizar e melhorar a leitura */
+    font-size: 20px;
+    margin-bottom: 30px;
 }
 
-/* --- ESTILO DOS BOTÕES (GERAL) --- */
-.btn-principal, .btn-contato {
-    text-decoration: none;
-    padding: 12px 25px;
-    margin: 10px;
-    border-radius: 5px;
-    font-weight: 600;
+#about {
+    background: #fff;
+    text-align: center;
+}
+
+#about h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.cta-button {
     display: inline-block;
-    transition: background-color 0.3s, color 0.3s, transform 0.2s;
-}
-
-.btn-principal {
-    background-color: var(--secondary-color);
-    color: var(--text-dark);
-    border: 2px solid var(--secondary-color);
-}
-
-.btn-principal:hover {
-    background-color: #ffc400;
-    transform: translateY(-2px);
-}
-
-.btn-contato {
-    background-color: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-}
-
-.btn-contato:hover {
-    background-color: var(--primary-color);
+    background: #007bff;
     color: white;
-    transform: translateY(-2px);
-}
-
-.huge-btn {
-    font-size: 1.5em;
-    padding: 20px 40px;
-}
-
-/* --- SEÇÃO DE SERVIÇOS --- */
-#servicos {
-    padding: 80px 50px;
-    text-align: center;
-    background-color: var(--background-light);
-}
-
-#servicos h2 {
-    font-size: 2.5em;
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    font-size: 1.1em;
-    color: var(--text-light);
-    margin-bottom: 50px;
-}
-
-/* Layout das caixas usando CSS Grid */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Estilo de cada caixa de serviço */
-.caixa-servico {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    transition: transform 0.3s, box-shadow 0.3s;
-    height: 100%; /* Garante que todas as caixas tenham a mesma altura no grid */
-    display: flex;
-    flex-direction: column;
-}
-
-.caixa-servico:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-.caixa-servico h3 {
-    color: var(--primary-color);
-    font-size: 1.6em;
-    margin-bottom: 15px;
-}
-
-.caixa-servico p {
-    margin-bottom: 15px;
-    color: var(--text-light);
-    flex-grow: 1; /* Permite que o parágrafo ocupe o espaço extra */
-}
-
-.icon-automação, .icon-chatbot, .icon-ia-ml {
-    font-size: 3.5em;
-    display: block;
-    margin-bottom: 15px;
-    color: var(--secondary-color);
-}
-
-.key-points {
-    list-style: none;
-    margin-bottom: 20px;
-    padding-left: 0;
-}
-
-.key-points li {
-    padding: 5px 0;
-    color: var(--text-dark);
-    font-size: 0.95em;
-    border-bottom: 1px dashed #ddd;
-}
-
-.btn-detalhes {
-    color: var(--primary-color);
+    padding: 10px 20px;
     text-decoration: none;
-    font-weight: 600;
-    display: block; /* Ocupa a largura total na parte de baixo */
-    margin-top: 15px;
-    transition: color 0.3s;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
 }
 
-.btn-detalhes:hover {
-    color: var(--secondary-color);
+.cta-button:hover {
+    background: #0056b3;
 }
 
-/* --- SEÇÃO CONSULTORIA/CONTATO --- */
-#consultoria {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 60px 50px;
-    text-align: center;
+.cta-button.secondary {
+    background: #333;
 }
 
-.consultoria-content {
-    max-width: 800px;
-    margin: 0 auto;
+.cta-button.secondary:hover {
+    background: #555;
 }
 
-#consultoria h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: var(--secondary-color);
-}
-
-#consultoria p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-#contato {
-    padding: 40px 50px;
-    text-align: center;
-    background-color: #ffffff;
-}
-
-/* --- FOOTER --- */
 footer {
-    background-color: #222;
-    color: #ccc;
+    background: #333;
+    color: white;
     text-align: center;
     padding: 20px 0;
-    font-size: 0.9em;
+    margin-top: 20px;
 }
 
-/* --- RESPONSIVIDADE BÁSICA (Para celulares) --- */
-@media (max-width: 900px) {
-    .services-grid {
-        /* Muda de 3 colunas para 1 coluna em telas menores */
-        grid-template-columns: 1fr;
-    }
+/* ========================================================= */
+/* ESTILO GERAL DE CARDS DE SERVIÇOS (PARA CORRIGIR O VISUAL DOS NOVOS CARDS) */
+/* ========================================================= */
 
-    #hero h1 {
-        font-size: 2.5em;
-    }
-
-    header, #hero, #servicos, #consultoria, #contato {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-}
-
-/* --- ESTILOS ESPECÍFICOS PARA LANDPAGES DE SERVIÇO (CSS para as subpáginas) --- */
-.small-hero {
-    padding: 60px 50px !important; /* Torna o topo da página menor */
-    border-bottom: 3px solid var(--secondary-color) !important;
-}
-
-.small-hero h1 {
-    font-size: 2.5em !important;
-}
-
-.breadcrumbs {
-    font-size: 0.9em;
-    color: var(--text-light);
-    margin-bottom: 10px;
-}
-
-.breadcrumbs a {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-.servico-detalhe {
-    padding: 80px 50px;
-    text-align: center;
-}
-
-.automacao-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas para detalhes */
-}
-
-.detalhe-box {
-    text-align: center;
-}
-
-.detalhe-box h3 {
-    margin-top: 15px;
-    font-size: 1.4em;
-}
-
-.detalhe-box .use-case {
-    font-style: italic;
-    color: var(--text-dark);
-    margin-top: 10px;
-    border-top: 1px dashed #eee;
-    padding-top: 10px;
-}
-
-.call-to-action-small {
-    margin-top: 50px;
-}
-
-/* Garante que o HEADER navegue corretamente para a HOME a partir da subpasta */
-header nav .nav-links a[href^="../"] {
-    color: white; /* Mantém a cor original */
-}
-
-/* Corrige o link do logo na subpágina */
-header nav .logo {
-    cursor: pointer;
-}
-
-/* --- SEÇÃO DO FORMULÁRIO DE CONTATO --- */
-#contact-form-section {
-    padding: 60px 50px;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-}
-
-.form-container {
-    max-width: 600px;
-    width: 100%;
-    padding: 30px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-.form-container h2 {
-    color: var(--primary-color);
+#services h2 {
+    color: #007bff;
     text-align: center;
     margin-bottom: 30px;
-    font-size: 2em;
 }
 
-#contact-form label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-weight: 600;
-    color: var(--text-dark);
+/* Cria um grid (layout de colunas) para os cards de serviço */
+.service-list {
+    display: grid;
+    /* Define o número de colunas, 3 por linha, responsivo */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* Espaço entre os cards */
+    padding: 30px 0;
 }
 
-#contact-form input[type="text"],
-#contact-form input[type="email"],
-#contact-form input[type="tel"],
-#contact-form select,
-#contact-form textarea {
-    width: 100%;
-    padding: 12px;
+/* Estilo para cada card de serviço */
+.service-card {
+    background-color: #fff; /* Fundo branco ou claro */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para os ícones */
+.service-card i {
+    font-size: 40px;
+    color: #007bff; /* Cor principal */
+    margin-bottom: 15px;
+}
+
+/* Títulos dos cards */
+.service-card h3 {
+    font-size: 20px;
     margin-bottom: 10px;
+    color: #333;
+}
+
+/* Botão "Ver Detalhes" dentro do card */
+.service-card .cta-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+/* ========================================================= */
+/* ESTILO PARA PÁGINA DE CONTATO (contato.html) */
+/* ========================================================= */
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.card h2 {
+    color: #007bff;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Define que o conteúdo do formulário (label e input) fique em uma coluna e alinhado */
+#contact-form-section .input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha o label à esquerda */
+    margin-bottom: 15px;
+}
+
+/* Estilo base para todos os inputs e textarea */
+#contact-form-section input[type="text"],
+#contact-form-section input[type="email"],
+#contact-form-section input[type="tel"],
+#contact-form-section textarea {
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total */
-    font-size: 1em;
-}
-
-#contact-form select {
-    appearance: none; /* Remove estilo padrão do sistema operacional */
-    background-color: #fff;
-    cursor: pointer;
-}
-
-#contact-form textarea {
-    resize: vertical;
-}
-
-#contact-form button[type="submit"] {
     width: 100%;
-    margin-top: 25px;
-    font-size: 1.2em;
-    padding: 15px 0;
-    cursor: pointer;
+    box-sizing: border-box; /* Garante que padding e borda não aumentem o tamanho total */
+    margin-top: 5px;
 }
 
-.privacidade {
-    text-align: center;
-    font-size: 0.8em;
-    color: #888;
-    margin-top: 20px;
+/* AJUSTES FINAIS DE LARGURA PARA O FORMULÁRIO DE CONTATO */
+#contact-form-section input[type="text"],
+#contact-form-section input[type="email"],
+#contact-form-section input[type="tel"] {
+    max-width: 450px; /* Limita a largura para ficar mais compacto */
+}
+
+/* Mantém a área de texto (textarea) maior, mas também limita */
+#contact-form-section textarea {
+    max-width: 600px;
 }
