@@ -1,92 +1,83 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sua Marca | Soluções Tecnológicas e Consultoria Sob Medida</title>
+    <title>TechIndigenaSolution - Soluções Digitais</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
     <header>
-        <nav>
-            <div class="logo">TechIndigenaSolution</div>
-            <div class="nav-links">
-                <a href="#servicos">Serviços</a>
-                <a href="#consultoria">Consultoria</a>
-                <a href="#contato">Contato</a>
-            </div>
-        </nav>
+        <div class="container">
+            <h1>TechIndigenaSolution</h1>
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="services/contato.html">Contato</a>
+            </nav>
+        </div>
     </header>
 
-    <section id="hero">
-        <div class="hero-content">
-            <h1>Construindo Soluções Sob Medida para o Seu Negócio.</h1>
-            <p>Especializado em <strong>Automação (RPA), Chatbots, IA/ML</strong> e <strong>Consultoria Estratégica</strong> para qualquer ramo. Vamos escalar seu negócio de forma acessível e inteligente.</p>
-            <div class="hero-actions">
-                <a href="#servicos" class="btn-principal">Ver Todos os Serviços</a>
-                <a href="#contato" class="btn-contato">Agendar Consultoria Gratuita</a>
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <h2>Tecnologia Indígena para o Seu Negócio</h2>
+                <p>Desenvolvemos soluções digitais personalizadas, com foco em simplicidade, eficiência e impacto cultural.</p>
+                <a href="#services" class="cta-button">Ver Nossos Serviços</a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="servicos">
-        <h2>Soluções Tecnológicas sob Medida</h2>
-        <p class="subtitle">Analisamos a sua dor e criamos a ferramenta certa para o seu segmento, seja Jurídico, Saúde, Local ou Consumo.</p>
+        <section id="services" class="container">
+            <h2>Nossos Serviços em Destaque</h2>
+            <div class="service-list">
 
-        <div class="services-grid">
-            <div class="caixa-servico">
-                <i class="icon-automação">⚙️</i>
-                <h3>Automações & RPA NoCode</h3>
-                <p>Transforme tarefas repetitivas em processos automáticos e escaláveis. Inclui preenchimento de forms, extração de dados e fluxos de trabalho específicos.</p>
-                <ul class="key-points">
-                    <li>RPA NoCode (Automação de Desktop)</li>
-                    <li>Web Scraping (Extração de Dados)</li>
-                    <li>Automações para Jurídico/Saúde</li>
-                </ul>
-                <a href="services/automacoes.html" class="btn-detalhes">Detalhes sobre Automação →</a>
+                <div class="service-card">
+                    <i class="fas fa-desktop"></i>
+                    <h3>Criação de Websites Institucionais</h3>
+                    <p>Construímos a presença digital da sua empresa com websites modernos, responsivos e otimizados para atrair clientes e aumentar a sua credibilidade no mercado.</p>
+                    <a href="services/websites.html" class="cta-button">Ver Detalhes</a>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Websites Eleitorais e Políticos</h3>
+                    <p>Estratégias digitais completas para campanhas eleitorais (permitidas por lei), com foco em reputação, divulgação de propostas e transparência. Inclui integração com mídias sociais e formulários de engajamento.</p>
+                    <a href="services/politica.html" class="cta-button">Ver Detalhes</a>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-camera-retro"></i>
+                    <h3>Portfólios para Modelos e Influencers</h3>
+                    <p>Criação de websites profissionais para portfólios (adultos e mirins), e-books e páginas de vendas focadas em campanhas publicitárias, parcerias e agendamento para eventos.</p>
+                    <a href="services/modelos.html" class="cta-button">Ver Detalhes</a>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>Websites para Fitness e Artes Marciais</h3>
+                    <p>Soluções digitais para academias de musculação, Boxe, Jiu-Jitsu, Muay Thai e outros esportes. Foco em horários, planos de matrícula online e demonstração de instrutores e modalidades.</p>
+                    <a href="services/fitness.html" class="cta-button">Ver Detalhes</a>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Consultoria em Automação de Processos</h3>
+                    <p>Identificamos e implementamos ferramentas de automação para tarefas repetitivas, liberando seu tempo para o que realmente importa: a estratégia e o crescimento do seu negócio.</p>
+                    <a href="services/consultoria.html" class="cta-button">Ver Detalhes</a>
+                </div>
+
             </div>
+        </section>
 
-            <div class="caixa-servico">
-                <i class="icon-chatbot">🤖</i>
-                <h3>Chatbots & Assistentes Inteligentes</h3>
-                <p>Atendimento 24/7 com inteligência e personalidade. Soluções de assistentes virtuais para engajar e converter em diversas plataformas.</p>
-                <ul class="key-points">
-                    <li>Chatbots para WhatsApp e Redes Sociais</li>
-                    <li>Assistentes de Vendas e Suporte para Sites</li>
-                    <li>Chatbots com Integração a IA (Geração de Texto)</li>
-                </ul>
-                <a href="services/chatbots.html" class="btn-detalhes">Detalhes sobre Chatbots →</a>
-            </div>
-
-            <div class="caixa-servico">
-                <i class="icon-ia-ml">🧠</i>
-                <h3>IA, ML & Desenvolvimento Web</h3>
-                <p>Construção de modelos de Machine Learning (ML) e Inteligência Artificial (IA), junto com a infraestrutura web para apresentá-los (Landpages).</p>
-                <ul class="key-points">
-                    <li>Criação de Landpages e Sites Institucionais</li>
-                    <li>Desenvolvimento de Modelos de IA e ML</li>
-                    <li>Integração com o Hugging Face (Demos)</li>
-                </ul>
-                <a href="services/ia-ml-consultoria.html" class="btn-detalhes">Detalhes e Projetos →</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="consultoria">
-        <div class="consultoria-content">
-            <h2>Consultoria Estratégica: Sua Próxima Solução Começa Aqui</h2>
-            <p>Seja você Pessoa Física ou Jurídica, de qualquer ramo, vamos analisar suas <strong>dores</strong> e desenhar uma solução tecnológica <strong>escalável, acessível e que faça sentido real</strong> para o seu negócio.</p>
-            <p>Entre em contato hoje para iniciarmos a análise das suas necessidades.</p>
-        </div>
-    </section>
-
-    <section id="contato">
-        <a href="services/contato.html" class="btn-principal huge-btn">Agendar Análise Gratuita e Sem Compromisso</a>
-    </section>
+        <section id="about" class="container">
+            <h2>Nossa Abordagem</h2>
+            <p>Usamos uma metodologia ágil e transparente, priorizando soluções que respeitam sua identidade e promovem um impacto positivo na sua área de atuação.</p>
+            <a href="services/contato.html" class="cta-button secondary">Fale Conosco</a>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2025 Sua Marca | Soluções Tecnológicas. Todos os direitos reservados.</p>
+        <p>&copy; 2024 TechIndigenaSolution. Todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
