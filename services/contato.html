@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato - TechIndigenaSolution</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container">
             <h1>TechIndigenaSolution</h1>
+            <div class="logo">
+                <img src="../logo.png" alt="TechIndigenaSolution Logo" height="40">
+            </div>
             <nav>
                 <a href="../index.html">Home</a>
                 <a href="contato.html" class="active">Contato</a>
@@ -18,30 +22,31 @@
     </header>
 
     <main class="container">
-        <section id="contact-form-section" class="card">
+        <section id="contact-form" class="card">
             <h2>Agende Sua Consultoria Estratégica Gratuita</h2>
             <p>Preencha o formulário abaixo para iniciarmos a análise das suas <strong>dores</strong> e necessidades. Em até 24h entraremos em contato para desenhar a <strong>solução tecnológica ideal</strong> para você.</p>
 
-            <form action="https://formspree.io/f/myznzgnv" method="POST" id="contact-form">
-                <div class="input-group">
-                    <label for="name">Nome Completo</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="input-group">
-                    <label for="email">Seu Melhor E-mail</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="input-group">
-                    <label for="phone">Telefone (Whatsapp)</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="input-group">
-                    <label for="project">Conte-nos sobre o seu Projeto e Desafios</label>
-                    <textarea id="project" name="project" rows="5" required></textarea>
+            <form action="#" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Seu Melhor E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
                 </div>
 
-                <div class="input-group" style="display: none;">
-                    <input type="text" name="_gotcha">
+                <div class="form-group">
+                    <label for="telefone">Telefone (Whatsapp)</label>
+                    <input type="tel" id="telefone" name="telefone">
+                </div>
+
+                <div class="form-group">
+                    <label for="projeto">Conte-nos sobre o seu Projeto e Desafios</label>
+                    <textarea id="projeto" name="projeto" rows="5" required></textarea>
                 </div>
 
                 <button type="submit" class="cta-button">Enviar Pedido de Análise</button>
@@ -52,7 +57,5 @@
     <footer>
         <p>&copy; 2024 TechIndigenaSolution. Todos os direitos reservados.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>

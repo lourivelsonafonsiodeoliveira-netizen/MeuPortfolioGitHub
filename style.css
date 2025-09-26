@@ -42,7 +42,7 @@ header nav a:hover, header nav a.active {
     color: #ffd700; /* Cor de destaque (amarelo) ao passar o mouse */
 }
 
-/* --- ESTILOS PARA O LOGO NO HEADER (CORREÇÃO DE ALINHAMENTO) --- */
+/* --- ESTILOS PARA O LOGO NO HEADER --- */
 
 .logo img {
     /* Garante que o logo tenha a altura correta e não fique muito grande */
@@ -86,32 +86,22 @@ header h1 {
     background-color: #5a6268;
 }
 
-/* --- ESTILOS PARA O BANNER DE FUNDO (CORRIGIDO) --- */
+/* --- ESTILOS PARA O BANNER DE FUNDO --- */
 
 .hero-section {
-    /* Caminho para a imagem PNG do banner */
     background-image: url('banner_fundo.png');
-
-    /* Configura o fundo para cobrir toda a área sem repetir */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
-    /* Adiciona uma cor escura transparente sobre a imagem para que o texto branco se destaque */
-    background-color: rgba(0, 0, 0, 0.45); /* Camada escura */
-    background-blend-mode: darken; /* Mistura a cor com a imagem */
-
-    /* Garante que o texto dentro da seção fique branco */
+    background-color: rgba(0, 0, 0, 0.45);
+    background-blend-mode: darken;
     color: white;
-
-    /* Aumenta a altura da seção para que o banner seja visível */
     padding: 150px 0;
-    text-align: center; /* Centraliza o conteúdo */
+    text-align: center;
 }
 
-/* Corrigido: Estilos para o texto no banner ficar grande e visível */
 .hero-section h2 {
-    font-size: 3em; /* Título grande */
+    font-size: 3em;
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
@@ -122,7 +112,6 @@ header h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* Garante que o botão na seção hero mantenha o estilo azul */
 .hero-section .cta-button {
     background-color: #007bff;
     color: white;
@@ -152,7 +141,7 @@ header h1 {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
-    width: calc(33% - 20px); /* 3 cards por linha no desktop */
+    width: calc(33% - 20px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
     text-align: center;
@@ -256,6 +245,58 @@ footer {
     font-weight: bold;
 }
 
+/* --- ESTILOS DE ORGANIZAÇÃO E VISUAL DO FORMULÁRIO (contato.html) --- */
+
+/* Estilos básicos para o grupo de formulário */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #007bff; /* Cor azul para as labels, dando destaque */
+}
+
+/* Estilo para todos os campos de entrada (input e textarea) */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Efeito ao focar no campo */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff; /* Borda azul ao focar */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Sombra azul clara */
+    outline: none; /* Remove o contorno padrão do navegador */
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Estilo para a linha de duas colunas */
+.form-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+    margin-bottom: 0;
+}
+
 /* Layout responsivo */
 @media (max-width: 768px) {
     .container {
@@ -263,7 +304,7 @@ footer {
     }
 
     .service-card {
-        width: calc(50% - 20px); /* 2 cards por linha em tablets */
+        width: calc(50% - 20px);
     }
 
     header .container {
@@ -278,11 +319,17 @@ footer {
     .hero-section h2 {
         font-size: 2em;
     }
+
+    /* Garante que em telas pequenas, as colunas voltem a ser linhas únicas */
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
 }
 
 @media (max-width: 480px) {
     .service-card {
-        width: 100%; /* 1 card por linha em celulares */
+        width: 100%;
     }
 
     .hero-section {
