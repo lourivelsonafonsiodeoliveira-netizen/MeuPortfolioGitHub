@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complexidade e Valor dos Serviços - TechIndigenaSolution</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        .service-complexity {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .complexity-card {
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 25px;
+            width: calc(33.33% - 25px); /* Três colunas */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .complexity-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+        }
+
+        .complexity-card h3 {
+            color: #007bff;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .complexity-card ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 15px;
+        }
+
+        /* ------------------------------------------- */
+        /* CÓDIGO CSS AJUSTADO AQUI */
+        /* ------------------------------------------- */
+        .complexity-card ul li {
+            margin-bottom: 15px; /* Aumenta um pouco o espaçamento vertical */
+            display: flex;
+            line-height: 1.4;
+        }
+
+        .complexity-card ul li i {
+            margin-right: 10px;
+            color: #007bff;
+            font-size: 1.1em;
+            min-width: 20px; /* Garante que o ícone tenha largura fixa */
+            text-align: center;
+        }
+
+        .complexity-card ul li span {
+            /* Permite que o texto se ajuste ao restante da largura */
+            flex-grow: 1;
+        }
+        /* ------------------------------------------- */
+
+        /* Responsividade para telas menores */
+        @media (max-width: 992px) {
+            .complexity-card {
+                width: calc(50% - 20px); /* Duas colunas em tablets */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .complexity-card {
+                width: 100%; /* Coluna única em smartphones */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>TechIndigenaSolution</h1>
+            <div class="logo">
+                <img src="../logo.png" alt="TechIndigenaSolution Logo" height="40">
+            </div>
+            <nav>
+                <a href="../index.html">Home</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Nosso Guia de Complexidade e Valor de Soluções Digitais</h2>
+            <p>O preço de um projeto reflete sua complexidade técnica, o tempo de desenvolvimento e o valor de negócio que ele gera. Conheça as categorias de nossos serviços:</p>
+
+            <div class="service-complexity">
+
+                <div class="complexity-card">
+                    <h3>1. Sites Estáticos</h3>
+                    <p>Ideal para presença digital, portfólios e páginas que não precisam salvar dados ou ter áreas de login.</p>
+                    <ul>
+                        <li><i class="fas fa-file-code"></i> <span><strong>Tecnologia:</strong> HTML, CSS e JavaScript simples.</span></li>
+                        <li><i class="fas fa-server"></i> <span><strong>Hospedagem:</strong> Geralmente gratuita (Ex: GitHub Pages).</span></li>
+                        <li><i class="fas fa-laptop-code"></i> <span><strong>Funcionalidade:</strong> Design responsivo, formulários de contato (com envio para e-mail/planilha), SEO básico.</span></li>
+                        <li><i class="fas fa-hand-holding-usd"></i> <span><strong>Valor:</strong> Credibilidade, baixo custo e facilidade de manutenção.</span></li>
+                    </ul>
+                </div>
+
+                <div class="complexity-card">
+                    <h3>2. Sites Dinâmicos e Sistemas</h3>
+                    <p>Para projetos que precisam interagir com o usuário, salvar informações e ter áreas restritas.</p>
+                    <ul>
+                        <li><i class="fas fa-database"></i> <span><strong>Tecnologia:</strong> Exige <strong>Back-end</strong> (Python/Flask, PHP) e <strong>Banco de Dados</strong> (MySQL, SQLite).</span></li>
+                        <li><i class="fas fa-server"></i> <span><strong>Hospedagem:</strong> Servidor Dinâmico Dedicado (Hospedagem Paga).</span></li>
+                        <li><i class="fas fa-lock"></i> <span><strong>Funcionalidade:</strong> Área de Login/Cadastro, CRM básico, painel administrativo, agendamentos, formulários que salvam dados.</span></li>
+                        <li><i class="fas fa-hand-holding-usd"></i> <span><strong>Valor:</strong> Gestão de clientes/leads e funcionalidades de sistema.</span></li>
+                    </ul>
+                </div>
+
+                <div class="complexity-card">
+                    <h3>3. Apps e Soluções de Alto Valor (IA)</h3>
+                    <p>O serviço de maior valor, focado em resolver problemas complexos de negócio através de código customizado.</p>
+                    <ul>
+                        <li><i class="fas fa-robot"></i> <span><strong>Tecnologia:</strong> <strong>Python</strong> puro (Streamlit/Gradio), Machine Learning e lógica de IA.</span></li>
+                        <li><i class="fas fa-server"></i> <span><strong>Hospedagem:</strong> Servidores de aplicação especializados (Ex: Streamlit Cloud, Hugging Face).</span></li>
+                        <li><i class="fas fa-calculator"></i> <span><strong>Funcionalidade:</strong> Apps para Simulação de Aposentadoria, Dashboards de Análise, Chatbots customizados com lógica de regras.</span></li>
+                        <li><i class="fas fa-hand-holding-usd"></i> <span><strong>Valor:</strong> Automação de inteligência, precisão e geração de receita/leads qualificados.</span></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <p style="margin-top: 40px; text-align: center; font-size: 1.1em;">Seu projeto será avaliado e enquadrado em uma destas categorias. Nossa precificação reflete o nível de <strong>Engenharia de Software</strong> e a <strong>Renda Recorrente</strong> (manutenção) necessária para garantir a estabilidade e as atualizações do seu sistema.</p>
+
+            <div class="contact-buttons" style="margin-top: 30px; text-align: center;">
+                <a href="contato.html" class="cta-button">Solicitar Análise de Projeto e Orçamento</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TechIndigenaSolution. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
